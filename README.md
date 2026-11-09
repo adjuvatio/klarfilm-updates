@@ -4,7 +4,7 @@
 
 Einmal die Installations-ZIP unter plugin.video.klarfilm herunterladen und in Kodi über „Aus ZIP-Datei installieren“ installieren. Das Paket ist zugleich Video-Add-on, Hintergrunddienst und Repository. Künftige höhere Versionen werden von Kodi erkannt.
 
-Neuinstallation: https://raw.githubusercontent.com/adjuvatio/klarfilm-updates/main/plugin.video.klarfilm/plugin.video.klarfilm-0.4.3.zip
+Neuinstallation: https://raw.githubusercontent.com/adjuvatio/klarfilm-updates/main/plugin.video.klarfilm/plugin.video.klarfilm-0.4.4.zip
 
 Neue Releases: veröffentlichte Versionsnummer erhöhen; mit build_release.py bauen, danach build_repository.py ausführen; ZIP, Prüfsummen und addons.xml gemeinsam committen. Veröffentlichte Versionen künftig nicht überschreiben.
 

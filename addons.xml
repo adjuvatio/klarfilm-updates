@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addons><addon id="plugin.video.klarfilm" name="Klarfilm" version="0.4.3" provider-name="Klarfilm contributors; based on xStream / Akisame">
+<addons><addon id="plugin.video.klarfilm" name="Klarfilm" version="0.4.4" provider-name="Klarfilm contributors; based on xStream / Akisame">
 	<requires>
 		<import addon="xbmc.addon" version="21.0.0" />
 		<import addon="xbmc.python" version="3.0.0" />
@@ -30,10 +30,10 @@
 		<platform>all</platform>
 		<license>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</license>
 		<assets>
-			<icon>resources/icon.png</icon>
-			<fanart>resources/fanart.jpg</fanart>
-			<banner>resources/banner.png</banner>
-			<clearlogo>resources/clearlogo.png</clearlogo>
+			<icon>resources/art/brand/v2/icon.png</icon>
+			<fanart>resources/art/brand/v2/fanart.jpg</fanart>
+			<banner>resources/art/brand/v2/banner.png</banner>
+			<clearlogo>resources/art/brand/v2/clearlogo.png</clearlogo>
 		</assets>
 	</extension>
 </addon></addons>
