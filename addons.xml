@@ -242,4 +242,16 @@
       </assets>
     </extension>
   </addon>
+  <addon id="service.klarfilm.komplett" name="Klarfilm Komplettinstallation" version="1.0.0" provider-name="Klarfilm">
+    <requires>
+      <import addon="xbmc.python" version="3.0.0" />
+    </requires>
+    <extension point="xbmc.service" library="service.py" start="startup" />
+    <extension point="xbmc.addon.metadata">
+      <summary lang="de_DE">Klarfilm 0.4.5 mit allen benoetigten Modulen in einer ZIP-Datei</summary>
+      <description lang="de_DE">Installiert Klarfilm, ResolveURL, die benoetigten Python-Bibliotheken und das Update-Repository beim Kodi-Start. Danach Kodi neu starten.</description>
+      <platform>all</platform>
+      <license>GPL-3.0-or-later</license>
+    </extension>
+  </addon>
 </addons>
