@@ -1,0 +1,32 @@
+name: Verify Kodi source
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check ZIPs and Kodi directory HTML
+        run: |
+          python3 - <<'PY'
+          import re, pathlib, zipfile
+          p=pathlib.Path('index.html').read_text()
+          pat=r'<a href="([^"]*)"[^>]*>\s*(.*?)\s*</a>(.+?)(?=<a|</tr|$)'
+          matches=re.findall(pat,p,re.I|re.S)
+          print('Kodi parser matches:', [m[0] for m in matches])
+          for name in ['repository.klarfilm-1.0.0.zip','plugin.video.klarfilm-0.4.4.zip']:
+              assert name in [m[0] for m in matches], f'Kodi cannot parse {name}'
+              with zipfile.ZipFile(name) as z: assert z.testzip() is None
+          PY
+      - name: Verify published URL
+        run: |
+          for i in $(seq 1 12); do
+            code=$(curl -L -sS -o /tmp/kodi-index -w '%{http_code}' https://adjuvatio.github.io/klarfilm-updates/ || true)
+            if [ "$code" = 200 ] && grep -q 'repository.klarfilm-1.0.0.zip' /tmp/kodi-index; then
+              echo "Public Kodi directory HTTP 200 and ZIP link present"; exit 0
+            fi
+            echo "Attempt $i: HTTP $code"; sleep 20
+          done
+          exit 1
