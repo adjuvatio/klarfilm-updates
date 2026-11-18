@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <addons>
-  <addon id="plugin.video.klarfilm" name="Klarfilm" version="0.4.15" provider-name="Klarfilm contributors; based on xStream / Akisame">
+  <addon id="plugin.video.klarfilm" name="Klarfilm" version="0.4.16" provider-name="Klarfilm contributors; based on xStream / Akisame">
     <requires>
       <import addon="xbmc.addon" version="21.0.0" />
       <import addon="xbmc.python" version="3.0.0" />
@@ -31,7 +31,7 @@
       </assets>
     </extension>
   </addon>
-  <addon id="repository.klarfilm" name="Klarfilm Updates" version="1.0.0" provider-name="Klarfilm">
+  <addon id="repository.klarfilm" name="Klarfilm Updates" version="1.0.1" provider-name="Klarfilm">
     <requires>
       <import addon="xbmc.addon" version="21.0.0" />
     </requires>
