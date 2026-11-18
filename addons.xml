@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <addons>
-  <addon id="plugin.video.klarfilm" name="Klarfilm" version="0.4.13" provider-name="Klarfilm contributors; based on xStream / Akisame">
+  <addon id="plugin.video.klarfilm" name="Klarfilm" version="0.4.14" provider-name="Klarfilm contributors; based on xStream / Akisame">
     <requires>
       <import addon="xbmc.addon" version="21.0.0" />
       <import addon="xbmc.python" version="3.0.0" />
